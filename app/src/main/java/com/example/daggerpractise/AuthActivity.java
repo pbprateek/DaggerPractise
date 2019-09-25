@@ -10,8 +10,6 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 public class AuthActivity extends DaggerAppCompatActivity {
 
-    @Inject
-    String someString;
 
 
     @Override
