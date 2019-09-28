@@ -1,8 +1,9 @@
 package com.example.daggerpractise.di;
 
 
+import com.example.daggerpractise.di.auth.AuthModule;
+import com.example.daggerpractise.di.auth.AuthViewModelModule;
 import com.example.daggerpractise.ui.auth.AuthActivity;
-import com.example.daggerpractise.ui.auth.AuthViewModel;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -11,8 +12,8 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityBuilderModule {
 
 
-    //This limits the Scope of AuthViewModel to Auth Activity
-    @ContributesAndroidInjector(modules = {AuthViewModelModule.class})
+    //This limits the Scope of AuthViewModel to Auth Activity,internall this creates a SubComponent
+    @ContributesAndroidInjector(modules = {AuthViewModelModule.class, AuthModule.class})
     abstract AuthActivity contributeAuthActivity();
 
 
