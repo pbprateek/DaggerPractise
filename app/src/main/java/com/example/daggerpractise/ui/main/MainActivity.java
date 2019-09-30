@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.example.daggerpractise.BaseActivity;
 import com.example.daggerpractise.R;
 import com.example.daggerpractise.databinding.ActivityMainBinding;
+import com.example.daggerpractise.ui.main.images.ImagesFragment;
 import com.example.daggerpractise.ui.main.profile.ProfileFragment;
 
 public class MainActivity extends BaseActivity {
@@ -27,7 +28,7 @@ public class MainActivity extends BaseActivity {
 
     private void testFragment(){
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.main_container, new ProfileFragment())
+                .replace(R.id.main_container, new ImagesFragment())
                 .commit();
     }
 

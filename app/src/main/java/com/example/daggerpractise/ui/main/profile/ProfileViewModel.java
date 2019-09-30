@@ -25,8 +25,6 @@ public class ProfileViewModel extends ViewModel {
     }
 
 
-
-
     public LiveData<AuthResource<User>> getAuthenticatedUser(){
         return sessionManager.getAuthUser();
     }
