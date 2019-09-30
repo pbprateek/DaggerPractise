@@ -47,18 +47,11 @@ public class AuthActivity extends DaggerAppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_auth);
         authViewModel = ViewModelProviders.of(this, mViewModelFactory).get(AuthViewModel.class);
-        setLogo();
         binding.loginButton.setOnClickListener(this);
         subscribeObservers();
 
     }
 
-
-    private void setLogo() {
-
-        requestManager.load(logo)
-                .into(binding.loginLogo);
-    }
 
     @Override
     public void onClick(View view) {
